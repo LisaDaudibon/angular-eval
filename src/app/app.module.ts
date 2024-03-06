@@ -14,7 +14,8 @@ import { FieldComponent } from './components/ui/field/field.component'
 import { ButtonComponent } from './components/ui/button/button.component'
 import { MovieComponent } from './views/movie/movie.component'
 import { BookmarkedMoviesComponent } from './views/bookmarked-movies/bookmarked-movies.component';
-import { SingleMovieComponent } from './components/single-movie/single-movie.component'
+import { SingleMovieComponent } from './components/single-movie/single-movie.component';
+import { MovieFormComponent } from './components/movie-form/movie-form.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SingleMovieComponent } from './components/single-movie/single-movie.com
     ButtonComponent,
     MovieComponent,
     BookmarkedMoviesComponent,
-    SingleMovieComponent
+    SingleMovieComponent,
+    MovieFormComponent
   ],
   imports: [
     BrowserModule,
