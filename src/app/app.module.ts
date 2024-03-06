@@ -12,6 +12,8 @@ import { MovieCategoriesComponent } from './components/movie-categories/movie-ca
 import { MovieStarButtonComponent } from './components/movie-star-button/movie-star-button.component'
 import { FieldComponent } from './components/ui/field/field.component'
 import { ButtonComponent } from './components/ui/button/button.component'
+import { MovieComponent } from './views/movie/movie.component'
+import { BookmarkedMoviesComponent } from './views/bookmarked-movies/bookmarked-movies.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ButtonComponent } from './components/ui/button/button.component'
     MovieStarButtonComponent,
     MoviesComponent,
     FieldComponent,
-    ButtonComponent
+    ButtonComponent,
+    MovieComponent,
+    BookmarkedMoviesComponent
   ],
   imports: [
     BrowserModule,
