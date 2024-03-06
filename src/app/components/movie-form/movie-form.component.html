@@ -1,0 +1,43 @@
+<div class="card mt-3">
+  <div class="card-header">Ajout d'un film</div>
+  <div class="card-body">
+    <form [formGroup]="movieForm" (submit)="addMovie()">
+      <div class="mb-2">
+        <label class="form-label" for="title">Titre</label>
+        <input formControlName="title" class="form-control" name="title" type="text" style="color:black"/>
+        <p *ngIf="title.invalid">Le champs titre est obligatoire</p>
+      </div>
+      <div class="mb-2">
+        <label class="form-label" for="picture">Lien vers l'image</label>
+        <input formControlName="picture" class="form-control" name="picture" type="text" style="color:black"/>
+      </div>
+      <div class="mb-2">
+        <label class="form-label" for="release_date">Date de sortie</label>
+        <input formControlName="release_date" class="form-control" name="release_date" type="text" style="color:black"/>
+        <p *ngIf="release_date.invalid">Le champs date de sortie est obligatoire</p>
+      </div>
+      <div class="mb-2">
+        <label class="form-label" for="realisator">Réalisateur</label>
+        <input formControlName="realisator" class="form-control" name="realisator" type="text" style="color:black"/>
+        <p *ngIf="realisator.invalid">Le champs réalisateur est obligatoire</p>
+      </div>
+      <div class="mb-2">
+        <label class="form-label" for="rating">Note</label>
+        <input formControlName="rating" class="form-control" name="rating" type="text" style="color:black"/>
+        <p *ngIf="rating.invalid">Le champs note est obligatoire</p>
+      </div>
+      <div class="mb-2">
+        <label class="form-label" for="categories">Catégories</label>
+        <input formControlName="categories" class="form-control" name="categories" type="text" style="color:black"/>
+        <p *ngIf="categories.invalid">Le champs catégories est obligatoire</p>
+      </div>
+      <div class="mb-2">
+        <label class="form-label" for="synopsis">synopsis</label>
+        <input formControlName="synopsis" class="form-control" name="synopsis" type="text" style="color:black"/>
+        <p *ngIf="synospsis.invalid">Le champs synospsis est obligatoire</p>
+      </div>
+      <!-- <button type="submit" class="btn btn-dark" [disabled]="orderForm.invalid">Submit</button> -->
+      <button type="submit" class="btn btn-dark" [disabled]="movieForm.invalid">Submit</button>
+    </form>
+  </div>
+</div>
