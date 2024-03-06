@@ -18,7 +18,7 @@ export class MoviesComponent {
 
   trackByMovieId(id: number, movie: Movie): number { return movie.id}
 
-  movieDetailRedirect(id: number) {
+  movieDetailRedirect(id: string) {
     this._router.navigateByUrl(`/movies/${id}`)
   }
 

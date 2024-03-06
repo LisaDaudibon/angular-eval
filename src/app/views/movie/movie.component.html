@@ -1,1 +1,7 @@
-<p>movie works!</p>
+<div *ngIf="$movie | async as movie; else: elseBlock">
+  <app-movie-card [movie]="movie"></app-movie-card>
+</div>
+
+<ng-template #elseBlock>
+  <p class="text-center">Aucun produit trouvé avec cette identifiant</p>
+</ng-template>

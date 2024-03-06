@@ -15,4 +15,8 @@ export class MoviesService {
   fetchAllMovies(): Observable<Movie[]>{
     return this._httpClient.get<Movie[]>(`${API_URL}/movies`)
   }
+
+  fetchMovieById(id: string): Observable<Movie> {
+    return this._httpClient.get<Movie>(`${API_URL}/movies/${id}`)
+  }
 }
