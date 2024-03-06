@@ -13,7 +13,8 @@ import { MovieStarButtonComponent } from './components/movie-star-button/movie-s
 import { FieldComponent } from './components/ui/field/field.component'
 import { ButtonComponent } from './components/ui/button/button.component'
 import { MovieComponent } from './views/movie/movie.component'
-import { BookmarkedMoviesComponent } from './views/bookmarked-movies/bookmarked-movies.component'
+import { BookmarkedMoviesComponent } from './views/bookmarked-movies/bookmarked-movies.component';
+import { SingleMovieComponent } from './components/single-movie/single-movie.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BookmarkedMoviesComponent } from './views/bookmarked-movies/bookmarked-
     FieldComponent,
     ButtonComponent,
     MovieComponent,
-    BookmarkedMoviesComponent
+    BookmarkedMoviesComponent,
+    SingleMovieComponent
   ],
   imports: [
     BrowserModule,

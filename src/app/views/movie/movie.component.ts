@@ -15,7 +15,6 @@ export class MovieComponent {
     const movieId: string | null = this._activatedRoute.snapshot.paramMap.get('id')
     if (movieId && !Number.isNaN(movieId)){
       this.$movie = this._movieService.fetchMovieById(movieId)
-      console.log(this.$movie)
     } else {
       console.error("L'id passé n'est pas valide")
       this._router.navigateByUrl('')

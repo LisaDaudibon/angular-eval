@@ -1,0 +1,52 @@
+<div class="u-wrapper">
+  <article class="detail-movie">
+    <header class="detail-movie__header">
+      <app-button mode="ghost" routerLink="">
+        <lucide-icon button-start name="chevron-left"></lucide-icon> Retour</app-button>
+
+      <div class="detail-movie__header-actions">
+        <app-button [icon]="true" mode="ghost" href="#">
+          <lucide-icon name="edit3"></lucide-icon>
+        </app-button>
+
+        <app-button [icon]="true" type="button" mode="ghost">
+          <lucide-icon name="trash2"></lucide-icon>
+        </app-button>
+      </div>
+    </header>
+
+    <main class="detail-movie__main">
+      <div class="detail-movie__main-left">
+        <img
+          class="detail-movie__picture"
+          src="{{movie.picture}}"
+          alt=""
+        />
+      </div>
+
+      <div class="detail-movie__main-right">
+        <div class="detail-movie__main-header">
+          <h1 class="detail-movie__title">{{movie.title}}</h1>
+
+          <button class="movie-star-button is-favorite" type="button">
+            <lucide-icon name="star"></lucide-icon>
+          </button>
+        </div>
+
+        <p>{{movie.realisator}}]</p>
+        <p>Note : {{movie.rating}}</p>
+
+        <ul class="movie-categories">
+          <li class="movie-categories__item">{{movie.categories}}</li>
+        </ul>
+      </div>
+
+      <div class="detail-movie__main-content">
+        <h2>Synopsis</h2>
+        <p>
+          {{movie.synopsis}}
+        </p>
+      </div>
+    </main>
+  </article>
+</div>
