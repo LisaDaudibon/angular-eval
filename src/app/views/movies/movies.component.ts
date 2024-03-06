@@ -1,6 +1,7 @@
 import { Movie } from '@/models/app.model'
 import { MoviesService } from '@/services/movies.service'
 import { Component } from '@angular/core'
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs'
 
 @Component({
@@ -11,11 +12,15 @@ import { Observable } from 'rxjs'
 export class MoviesComponent {
   $fetchMovies: Observable<Movie[]>;
 
-  constructor(private _movieService: MoviesService){ 
+  constructor(private _movieService: MoviesService, private _router: Router){ 
     this.$fetchMovies = this._movieService.fetchAllMovies();
   }
 
   trackByMovieId(id: number, movie: Movie): number { return movie.id}
+
+  movieDetailRedirect(id: number) {
+    this._router.navigateByUrl(`/movies/${id}`)
+  }
 
   // public spiderMan: Movie = {
   //   "title": "Spider-Man",

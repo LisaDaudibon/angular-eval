@@ -9,7 +9,7 @@
   </div>
 
   <ul class="movie-list__list">
-    <li class="movie-list__item" *ngFor="let movie of $fetchMovies | async ; trackBy: trackByMovieId">
+    <li class="movie-list__item" *ngFor="let movie of $fetchMovies | async ; trackBy: trackByMovieId" (click)="movieDetailRedirect(movie.id)">
       <app-movie-card [movie]="movie" />
     </li>
   </ul>
