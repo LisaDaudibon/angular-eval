@@ -1,0 +1,19 @@
+<div class="u-wrapper u-wrapper--large">
+  <div class="page__header">
+    <h1>Mes films</h1>
+
+    <app-button href="/add">
+      <lucide-icon button-start name="plus"></lucide-icon>
+      Ajouter un film
+    </app-button>
+  </div>
+
+  <ul class="movie-list__list">
+    <li class="movie-list__item">
+      <app-movie-card [movie]="dune" />
+    </li>
+    <li class="movie-list__item">
+      <app-movie-card [movie]="spiderMan" />
+    </li>
+  </ul>
+</div>

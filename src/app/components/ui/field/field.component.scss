@@ -1,0 +1,90 @@
+:host {
+  ::ng-deep {
+    lucide-icon,
+    svg {
+      display: block;
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  ::ng-deep {
+    input,
+    select,
+    textarea {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font-size: inherit;
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 8.8em;
+    }
+
+    input,
+    select {
+      line-height: 1.5;
+      height: 2.4rem;
+    }
+  }
+}
+
+.field {
+  font-size: 1.6rem;
+  margin: 1.5em 0;
+
+  &__start,
+  &__end {
+    display: block;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__label {
+    display: block;
+    padding: 0 0 0.8rem 0.8rem;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding: calc(0.5em - 1px) 0.5em;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: rgba(white, 0.08);
+
+    &:focus-within,
+    &:active {
+      border: 1px solid rgba(white, 0.48);
+    }
+  }
+
+  &__errors {
+    padding-left: 0.8rem;
+    padding-top: 0.8rem;
+    color: var(--ms-danger-color);
+
+    p,
+    ul {
+      margin: 0;
+    }
+
+    ul {
+      padding-left: 2.4rem;
+    }
+  }
+}

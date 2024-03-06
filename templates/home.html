@@ -1,0 +1,92 @@
+<header class="header">
+  <div class="header__left">
+    <a class="header__link" href="#">
+      <img class="header__logo" src="/assets/img/icon.svg" alt="" />
+    </a>
+  </div>
+
+  <div class="header__center">
+    <app-field>
+      <lucide-icon name="search" field-start></lucide-icon>
+      <input
+        class="input-search"
+        type="search"
+        placeholder="Rechercher un film, un réalisateur"
+      />
+    </app-field>
+  </div>
+
+  <div class="header__right">
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link">Accueil</a>
+        </li>
+
+        <li class="menu__item">
+          <a href="#" class="menu__link">Mes favoris</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="u-wrapper u-wrapper--large">
+  <div class="page__header">
+    <h1>Mes films</h1>
+
+    <app-button href="/add">
+      <lucide-icon button-start name="plus"></lucide-icon>
+      Ajouter un film
+    </app-button>
+  </div>
+
+  <ul class="movie-list__list">
+    <li class="movie-list__item">
+      <article class="movie-card">
+        <div class="movie-card__infos">
+          <div class="movie-card__header">
+            <h2 class="movie-card__title">Mourir peut attendre</h2>
+            <button class="movie-star-button is-favorite" type="button">
+              <lucide-icon name="star"></lucide-icon>
+            </button>
+          </div>
+          <p class="movie-card__baseline">Cary Joji Fukunaga - 2021</p>
+          <p class="movie-card__note">Note : 7.6/10</p>
+
+          <ul class="movie-categories">
+            <li class="movie-categories__item">Espionnage</li>
+          </ul>
+        </div>
+
+        <div class="movie-card__picture">
+          <img
+            src="https://fr.web.img5.acsta.net/pictures/20/04/21/16/11/1133098.jpg"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+      </article>
+    </li>
+  </ul>
+</div>
+
+<div class="notifications">
+  <ul class="notifications__list">
+    <li class="notifications__item notification">
+      <p class="notification__title">Notification title</p>
+
+      <p class="notification__message">Example de notification</p>
+
+      <app-button
+        [icon]="true"
+        type="button"
+        mode="ghost"
+        color="white"
+        class="notification__button"
+      >
+        <lucide-icon name="x"></lucide-icon>
+      </app-button>
+    </li>
+  </ul>
+</div>

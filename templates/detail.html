@@ -1,0 +1,102 @@
+<header class="header">
+  <div class="header__left">
+    <a class="header__link" href="#">
+      <img class="header__logo" src="/assets/img/icon.svg" alt="" />
+    </a>
+  </div>
+
+  <div class="header__center">
+    <app-field>
+      <lucide-icon name="search" field-start></lucide-icon>
+      <input
+        class="input-search"
+        type="search"
+        placeholder="Rechercher un film, un réalisateur"
+      />
+    </app-field>
+  </div>
+
+  <div class="header__right">
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a
+            href="#"
+            class="menu__link"
+            routerLinkActive="is-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Accueil</a
+          >
+        </li>
+
+        <li class="menu__item">
+          <a
+            href="#"
+            class="menu__link"
+            routerLinkActive="is-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Mes favoris</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="u-wrapper">
+  <article class="detail-movie">
+    <header class="detail-movie__header">
+      <app-button mode="ghost">
+        <lucide-icon button-start name="chevron-left"></lucide-icon>
+        Retour</app-button
+      >
+
+      <div class="detail-movie__header-actions">
+        <app-button [icon]="true" mode="ghost" href="#">
+          <lucide-icon name="edit3"></lucide-icon>
+        </app-button>
+
+        <app-button [icon]="true" type="button" mode="ghost">
+          <lucide-icon name="trash2"></lucide-icon>
+        </app-button>
+      </div>
+    </header>
+
+    <main class="detail-movie__main">
+      <div class="detail-movie__main-left">
+        <img
+          class="detail-movie__picture"
+          src="https://fr.web.img5.acsta.net/pictures/20/04/21/16/11/1133098.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="detail-movie__main-right">
+        <div class="detail-movie__main-header">
+          <h1 class="detail-movie__title">Mourir peut attendre</h1>
+
+          <button class="movie-star-button is-favorite" type="button">
+            <lucide-icon name="star"></lucide-icon>
+          </button>
+        </div>
+
+        <p>Cary Joji Fukunaga - 2021</p>
+        <p>Note : 7.6/10</p>
+
+        <ul class="movie-categories">
+          <li class="movie-categories__item">Espionnage</li>
+        </ul>
+      </div>
+
+      <div class="detail-movie__main-content">
+        <h2>Synopsis</h2>
+        <p>
+          Bond a quitté les services secrets, mais son repos est de courte durée
+          lorsque son vieil ami Felix Leiter de la CIA lui demande son aide, ce
+          qui entraîne Bond sur la piste d'un ennemi armé de nouvelles armes
+          technologiques redoutables.
+        </p>
+      </div>
+    </main>
+  </article>
+</div>

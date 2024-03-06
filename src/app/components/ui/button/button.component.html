@@ -1,0 +1,21 @@
+<a *ngIf="isLink" [routerLink]="href" [ngClass]="classes">
+  <ng-container *ngTemplateOutlet="innerButton"></ng-container>
+</a>
+
+<button *ngIf="!isLink" [ngClass]="classes" [type]="buttonType">
+  <ng-container *ngTemplateOutlet="innerButton"></ng-container>
+</button>
+
+<ng-template #innerButton>
+  <span class="start">
+    <ng-content select="[button-start]"></ng-content>
+  </span>
+
+  <span>
+    <ng-content></ng-content>
+  </span>
+
+  <span class="end">
+    <ng-content select="[button-end]"></ng-content>
+  </span>
+</ng-template>

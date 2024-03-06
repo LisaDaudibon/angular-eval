@@ -1,0 +1,22 @@
+<article class="movie-card" *ngIf="movie">
+  <div class="movie-card__infos">
+    <div class="movie-card__header">
+      <h2 class="movie-card__title">
+        {{ movie.title }}
+      </h2>
+      <app-movie-star-button class="movie-card__star" [starred]="movie.starred"
+        (click)="onStarClick(); $event.stopPropagation()">
+      </app-movie-star-button>
+    </div>
+    <p class="movie-card__baseline">
+      {{ movie.realisator }} - {{ movie.release_date }}
+    </p>
+    <p class="movie-card__note">Note : {{ movie.rating }}/10</p>
+
+    <app-movie-categories [categories]="movie.categories"></app-movie-categories>
+  </div>
+
+  <div class="movie-card__picture">
+    <img [src]="movie.picture" alt="" loading="lazy" />
+  </div>
+</article>

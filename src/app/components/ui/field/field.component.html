@@ -1,0 +1,33 @@
+<div class="field" [ngClass]="{ 'is-error': errors && errorsText }">
+  <label>
+    <span class="field__label">{{ label }}</span>
+    <span class="field__input">
+      <span class="field__start">
+        <ng-content select="[field-start]"></ng-content>
+      </span>
+
+      <ng-content></ng-content>
+
+      <span class="field__end">
+        <ng-content select="[field-end]"></ng-content>
+      </span>
+    </span>
+  </label>
+
+  <div
+    class="field__errors"
+    *ngIf="errors && errorsText && formControl?.touched"
+  >
+    <ng-container *ngIf="errorType === 'string'; else multipleErrors">
+      <p>{{ errorsText }}</p>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #multipleErrors>
+  <ul>
+    <ng-container *ngFor="let item of errors | keyvalue">
+      <li *ngIf="getErrorsText(item.key)">{{ getErrorsText(item.key) }}</li>
+    </ng-container>
+  </ul>
+</ng-template>

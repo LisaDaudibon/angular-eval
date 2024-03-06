@@ -1,0 +1,84 @@
+{
+  "movies": [
+    {
+      "title": "Dune",
+      "picture": "https://fr.web.img6.acsta.net/pictures/21/08/10/12/20/4633954.jpg",
+      "synopsis": "Feature adaptation of Frank Herbert's science fiction novel, about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+      "release_date": 2021,
+      "realisator": "Denis Villeneuve",
+      "rating": 8.3,
+      "categories": [
+        "Science-fiction"
+      ],
+      "starred": true,
+      "id": 1
+    },
+    {
+      "title": "Spider-Man",
+      "picture": "https://fr.web.img5.acsta.net/medias/nmedia/00/00/00/33/spiderman.jpg",
+      "synopsis": "Mordu par une araignée génétiquement modifiée, un lycéen nerveux, timide et maladroit acquiert des capacités semblables à celles d'une araignée qu'il doit utiliser pour combattre le mal en tant que super-héros après qu'une tragédie s'abatte sur sa famille.",
+      "release_date": 2002,
+      "realisator": "Sam Raimi",
+      "rating": 7.3,
+      "categories": [
+        "Action",
+        "Science-fiction"
+      ],
+      "starred": true,
+      "id": 2
+    },
+    {
+      "title": "Mourir peut attendre",
+      "picture": "https://fr.web.img5.acsta.net/pictures/20/04/21/16/11/1133098.jpg",
+      "synopsis": "Bond a quitté les services secrets, mais son repos est de courte durée lorsque son vieil ami Felix Leiter de la CIA lui demande son aide, ce qui entraîne Bond sur la piste d'un ennemi armé de nouvelles armes technologiques redoutables.",
+      "release_date": 2021,
+      "realisator": "Cary Joji Fukunaga",
+      "rating": 7.6,
+      "categories": [
+        "Espionnage"
+      ],
+      "starred": false,
+      "id": 3
+    },
+    {
+      "title": "The Suicide Squad",
+      "picture": "https://fr.web.img6.acsta.net/pictures/21/03/26/16/42/1810776.jpg",
+      "synopsis": "Les super-vilains Harley Quinn, Bloodsport, Peacemaker et une belle collection d'escrocs à la prison de Belle Reve rejoignent la super secrète et super louche Task Force X, sur l'île lointaine et bourrée d'ennemis de Corto Maltese.",
+      "release_date": 2021,
+      "realisator": "James Gunn",
+      "rating": 7.3,
+      "categories": [
+        "Super-héros"
+      ],
+      "starred": false,
+      "id": 4
+    },
+    {
+      "title": "Interstellar",
+      "picture": "https://fr.web.img6.acsta.net/pictures/14/09/24/12/08/158828.jpg",
+      "synopsis": "Dans un monde post-apocalyptique et en famine, une équipe d'explorateurs cherche une nouvelle planète habitable pour l'espèce humaine.",
+      "release_date": 2014,
+      "realisator": "Christopher Nolan",
+      "rating": 8.6,
+      "categories": [
+        "Science-fiction",
+        "Drame"
+      ],
+      "starred": true,
+      "id": 5
+    },
+    {
+      "title": "Joker",
+      "picture": "https://fr.web.img6.acsta.net/pictures/19/09/03/12/02/4765874.jpg",
+      "synopsis": "Arthur Fleck, un comédien affligé par des troubles mentaux, se voit mis de côté par la société. S'amorce ensuite une descente aux enfers emplie de révoltes et de crime violents ce qui le confrontera à son alter ego, Le Joker.",
+      "release_date": 2019,
+      "realisator": "Todd Phillips",
+      "rating": 8.4,
+      "categories": [
+        "Thriller psychologique"
+      ],
+      "starred": false,
+      "id": 6
+    }
+  ]
+}

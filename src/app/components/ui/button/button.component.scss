@@ -1,0 +1,130 @@
+:host {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.button {
+  --button-color-hue: var(--ms-color1-hue);
+  --button-color-saturation: var(--ms-color1-saturation);
+  --button-color-light: var(--ms-color1-light);
+  --button-color-light-variation: calc(var(--button-color-light) - 6%);
+
+  --button-color: hsl(
+    var(--button-color-hue),
+    var(--button-color-saturation),
+    var(--button-color-light)
+  );
+
+  --button-background: var(--button-color);
+  --button-text-color: var(--ms-color-dark);
+
+  --button-background-hover: hsl(
+    var(--button-color-hue),
+    var(--button-color-saturation),
+    var(--button-color-light-variation)
+  );
+  --button-text-color-hover: var(--button-text-color);
+
+  &:disabled {
+    opacity: 0.32;
+    pointer-events: none;
+    cursor: initial;
+  }
+
+  appearance: none;
+  margin: 0;
+  padding: 0.75em 1.25em;
+  line-height: 1;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  gap: 0.5em;
+  border-radius: 3em;
+  background: var(--button-background);
+  color: var(--button-text-color);
+  transition: transform 0.1s ease-in-out, color 0.1s linear, outline 0.1s linear;
+  text-decoration: none;
+
+  &.is-icon {
+    padding: 0.75em;
+  }
+
+  > span {
+    &:empty {
+      display: none;
+    }
+  }
+
+  ::ng-deep lucide-icon,
+  ::ng-deep svg {
+    display: block;
+    width: 1em;
+    height: 1em;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: var(--button-background-hover);
+    color: var(--button-text-color-hover);
+  }
+
+  &:focus {
+    outline: 2px solid
+      hsla(
+        var(--button-color-hue),
+        var(--button-color-saturation),
+        calc(var(--button-color-light) + 14%),
+        0.32
+      );
+  }
+
+  &:active {
+    transform: scale(0.92);
+  }
+
+  &.is-primary {
+    --button-color-hue: var(--ms-color1-hue);
+    --button-color-saturation: var(--ms-color1-saturation);
+    --button-color-light: var(--ms-color1-light);
+    --button-color-light-variation: calc(var(--ms-color1-light) - 6%);
+    --button-background: linear-gradient(85.93deg, #fab46e 0%, #f15a50 100%);
+  }
+
+  &.is-secondary {
+    --button-color-hue: var(--ms-color2-hue);
+    --button-color-saturation: var(--ms-color2-saturation);
+    --button-color-light: calc(var(--ms-color2-light) + 10%);
+    --button-color-light-variation: calc(var(--ms-color2-light) + 14%);
+
+    --button-text-color: var(--text-color);
+    --button-text-color-hover: var(--text-color);
+  }
+
+  &.is-danger {
+    --button-color-hue: var(--ms-color-danger-color-hue);
+    --button-color-saturation: var(--ms-color-danger-color-saturation);
+    --button-color-light: var(--ms-color-danger-color-light);
+  }
+
+  &.is-white {
+    --button-color-hue: var(--ms-color-text-color-hue);
+    --button-color-saturation: var(--ms-color-text-color-saturation);
+    --button-color-light: var(--ms-color-text-color-light);
+  }
+
+  &.button--ghost {
+    --button-background: transparent;
+    --button-background-hover: hsla(
+      var(--button-color-hue),
+      var(--button-color-saturation),
+      calc(var(--button-color-light) + 14%),
+      0.08
+    );
+    --button-text-color: var(--text-color);
+    --button-text-color-hover: var(--button-color);
+  }
+}
